@@ -1,0 +1,13 @@
+.body {
+    background-color: teal;
+    color: antiquewhite;
+}
+
+a {
+    color: black;
+}
+
+.hero__info-link {
+    background-color: cornflowerblue;
+    color: black;
+}
