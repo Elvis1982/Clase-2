@@ -1,13 +1,42 @@
+:root {
+  scroll-behavior: smooth;
+}
+
 .body {
-    background-color: teal;
-    color: antiquewhite;
+    background-color: #20232a;
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
 }
 
-a {
-    color: black;
+.header {
+  position: fixed;
+  /* z-index: 25; */
+  top: 0;
+  left: 0;
+  background-color: #20232a;
+  width: 100%;
+  box-shadow: 0 0 0.0625rem 0.0625rem #fff8;
 }
 
-.hero__info-link {
-    background-color: cornflowerblue;
-    color: black;
+.header-nav {
+  padding: 1rem 0;
+}
+
+.header-container {
+  display: flex;
+  padding: 0 1rem;
+}
+
+.header-nav__link-logo-container {
+  display: flex 
+}
+
+.header-nav__link-logo {
+  width: 108px;
+  height: 100px;
+}
+
+.header__menu-list-container {
+  display: flex;
 }
