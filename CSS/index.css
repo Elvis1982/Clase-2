@@ -165,13 +165,69 @@
   filter: brightness(112.5%);
 }
 
-.i-hero__img-container {}
-.i-hero__img-pro-tech-container {}
-.i-hero__img-pro {
-  border-radius: 50%;
+.i-hero__img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-.i-hero__img-tech-container {}
-.i-hero__img-tech {}
+.i-hero__img-pro-tech-container {
+  position: relative;
+}
+
+.i-hero__img-pro {
+  display: block;
+  background-color: #0004;
+  border-radius: 50%;
+  width: 256px;
+  height: 256px;  
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.i-hero__img-tech-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* background-color: #fff8; */
+  margin: 0;
+  animation: spin 10s linear 0s infinite normal forwards;
+}
+
+.i-hero__img-tech {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+.i-hero__img-tech:nth-child(1) {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.i-hero__img-tech:nth-child(2) {
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.i-hero__img-tech:nth-child(3) {
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.i-hero__img-tech:nth-child(4) {
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(100deg);
+}
 
 
 
