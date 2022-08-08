@@ -11,10 +11,10 @@
 
 .header {
   position: fixed;
-  /* z-index: 25; */
+  z-index: 25;
   top: 0;
   left: 0;
-  background-color: #20232a;
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   box-shadow: 0 0 0.0625rem 0.0625rem #fff8;
 }
@@ -25,6 +25,8 @@
 
 .header-container {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 0 1rem;
 }
 
@@ -39,4 +41,137 @@
 
 .header__menu-list-container {
   display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
+
+.header-nav__menu-link {
+  position: relative;
+  background-color: black;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.25s;
+}
+
+.header-nav__menu-link:hover,
+.header-nav__menu-link--active {
+  color: #61dafb;
+}
+
+.header-nav__menu-link::before {
+  content: '';
+  position: absolute;
+  /* top: calc(100% + 0.125rem); */
+  left: 0;
+  bottom: -0.125rem;
+  width: 0;
+  height: 0.0625rem;
+  background-color: gold;
+  transition: width 0.25s ease-in-out;
+}
+
+.header-nav__menu-link:hover::before,
+.header-nav__menu-link--active::before {
+  width: 100%;
+}
+
+.i-hero {
+  display: flex;
+  align-items: center;
+  background-image: url('../bg-hero-react-galaxy.webp');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.i-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: hsla(0, 0%, 0%, 0.068);
+}
+
+.i-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2rem;
+  background-image: linear-gradient(transparent, #20232a );
+  
+  background-color: hsla(0, 0%, 0%, 0.068);
+}
+
+.i-hero__container {
+  display: flex;
+  
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 0 1rem;
+  z-index: 5;
+} 
+
+.i-hero__info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.i-hero__info-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+.i-hero__info-subtitle {
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 0;
+}
+
+.i-hero__info-paragraph {
+  display: none;
+  /* text-align: center;
+  margin: 0; */
+}
+
+.i-hero__info-link {
+  background-color: #61dafb;
+  border: none;
+  border-radius: 0.5rem;
+  color: #000;
+  font-weight: 700;
+  font-size: 0.75rem;
+  font-family: monospace;
+  padding: 0.25em 1em;
+  text-decoration: none;
+  cursor: pointer;
+  /* text-align: center; */
+  /* box-sizing: border-box; */
+  transition: filter 0.25s, box-shadow 0.25s;
+}
+.i-hero__info-link:hover {
+  box-shadow: 0 0 0.25rem 0 #61dafb;
+  filter: brightness(112.5%);
+}
+
+.i-hero__img-container {}
+.i-hero__img-pro-tech-container {}
+.i-hero__img-pro {
+  border-radius: 50%;
+}
+.i-hero__img-tech-container {}
+.i-hero__img-tech {}
+
+
+
