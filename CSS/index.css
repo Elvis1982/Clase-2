@@ -230,7 +230,7 @@
   transform: translate(-50%, -50%) rotate(100deg);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .i-hero__container {
     max-width: 1024px;
     margin: 0 auto;
